@@ -255,6 +255,14 @@
             reaches breakeven, or that an attacker ever catches up with the honest chain, as follows [8]:
         </p>
         <p>
+            <ul>
+                <li>p = probability an honest node finds the next block</li>
+                <li>q = probability the attacker finds the next block</li>
+                <li>qz = probability the attacker will ever catch up from z blocks behind</li>
+            </ul>
+        </p>
+
+        <p>
             Given our assumption that p > q, the probability drops exponentially as the number of blocks the
             attacker has to catch up with increases. With the odds against him, if he doesn't make a lucky
             lunge forward early on, his chances become vanishingly small as he falls further behind.
@@ -290,7 +298,50 @@
             Running some results, we can see the probability drop off exponentially with z.
         </p>
         <p>
+            <ul>
+                <li>q=0.1</li>
+                <li>z=0 P=1.0000000</li>
+                <li>z=1 P=0.2045873</li>
+                <li>z=2 P=0.0509779</li>
+                <li>z=3 P=0.0131722</li>
+                <li>z=4 P=0.0034552</li>
+                <li>z=5 P=0.0009137</li>
+                <li>z=6 P=0.0002428</li>
+                <li>z=7 P=0.0000647</li>
+                <li>z=8 P=0.0000173</li>
+                <li>z=9 P=0.0000046</li>
+                <li>z=10 P=0.0000012</li>
+            </ul>
+            <ul>
+                <li>li>q=0.3</li>
+                <li>z=0 P=1.0000000</li>
+                <li>z=5 P=0.1773523</li>
+                <li>z=10 P=0.0416605</li>
+                <li>z=15 P=0.0101008</li>
+                <li>z=20 P=0.0024804</li>
+                <li>z=25 P=0.0006132</li>
+                <li>z=30 P=0.0001522</li>
+                <li>z=35 P=0.0000379</li>
+                <li>z=40 P=0.0000095</li>
+                <li>z=45 P=0.0000024</li>
+                <li>z=50 P=0.0000006</li>
+            </ul>
+        </p>
+        <p>
             Solving for P less than 0.1%...
+        </p>
+        <p>
+            <ul>
+                <li>P < 0.001</li> 
+                <li>q=0.10 z=5</li>
+                <li>q=0.15 z=8</li>
+                <li>q=0.20 z=11</li>
+                <li>q=0.25 z=15</li>
+                <li>q=0.30 z=24</li>
+                <li>q=0.35 z=41</li>
+                <li>q=0.40 z=89</li>
+                <li>q=0.45 z=340</li>
+            </ul>
         </p>
         <h2>
             XII. Conclusion
