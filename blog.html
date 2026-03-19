@@ -60,6 +60,15 @@
         <p>
             What is needed is an electronic payment system based on cryptographic proof instead of trust, allowing any two willing parties to transact directly with each other without the need for a trusted third party. Transactions that are computationally impractical to reverse would protect sellers from fraud, and routine escrow mechanisms could easily be implemented to protect buyers. In this paper, we propose a solution to the double-spending problem using a peer-to-peer distributed timestamp server to generate computational proof of the chronological order of transactions. The system is secure as long as honest nodes collectively control more CPU power than any cooperating group of attacker nodes.
         </p>
+        <h2>
+            II. Transactions
+        </h2>
+        <p>
+            We define an electronic coin as a chain of digital signatures. Each owner transfers the coin to the
+            next by digitally signing a hash of the previous transaction and the public key of the next owner
+            and adding these to the end of the coin. A payee can verify the signatures to verify the chain of
+            ownership.
+        </p>
         <hr>
         <h2 class="comments">
             Comments
